@@ -3,16 +3,20 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import injectContext from './store/appContext';
 import Home from './views/home';
 import NotFound from './views/notFound';
-import Test from './views/test';
+import Navbar from './components/navbar';
+import Register from './views/register';
+import Login from './views/login';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
         <Switch>
-            <Route exact path="/test" component={Test} />
-            <Route exact path="/" component={Home} />
-            <Route component={NotFound} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/" component={Home} />
+          <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
     </div>
