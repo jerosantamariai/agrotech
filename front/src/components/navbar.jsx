@@ -21,6 +21,17 @@ const Navbar = () => {
                     <li className="nav-item">
                         <Link className="nav-link" to="/login">Log In</Link>
                     </li>
+                    <li className="nav-item dropdown">
+                        <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nombre
+                        </Link>
+                        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <Link className="dropdown-item" href="#">Panel de Control</Link>
+                            <Link className="dropdown-item" href="#">Configuración</Link>
+                            <hr/>
+                            <Link className="dropdown-item" href="#">Cerrar Sesión</Link>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
