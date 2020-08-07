@@ -20,7 +20,7 @@ const injectContext = PassedComponent => {
         }
 
         componentDidMount() {
-            
+            this.state.actions.getUsers('http://localhost:5000/users');
         }
 
         render() {

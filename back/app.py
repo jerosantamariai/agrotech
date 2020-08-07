@@ -247,7 +247,7 @@ def loadroles():
 @manager.command
 def loadadmin():
     users = Users()
-    users.email = "jero@santamariai.cl"
+    users.email = "admin@gmail.com"
     users.password = bcrypt.generate_password_hash("123456")        #Its obviously the first change that I make into my webpage is to change this password of my account
     users.role_id = "1"
 
