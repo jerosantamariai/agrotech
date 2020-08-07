@@ -6,6 +6,7 @@ import NotFound from './views/notFound';
 import Navbar from './components/navbar';
 import Register from './views/register';
 import Login from './views/login';
+import MainDash from './views/mainDash';
 
 function App() {
   return (
@@ -13,10 +14,13 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/" component={Home} />
-          <Route component={NotFound} />
+          
+            <Route exact path="/dashboard" component={MainDash} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/" component={Home} />
+            <Route component={NotFound} />
+          
         </Switch>
       </BrowserRouter>
     </div>
