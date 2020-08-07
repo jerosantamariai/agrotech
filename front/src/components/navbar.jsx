@@ -18,10 +18,21 @@ const Navbar = props => {
                 </ul>
                 <ul className="navbar-nav ml-auto">
                     {
-                        !!store.currentUser === null ? (
+                        !!store.isAuth === true ? (
                             <li className="nav-item dropdown">
                                 <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Nombre
+                                    {
+                                        !!store.currentUser.users.name === null ? (
+                                            <>
+                                                {store.currentUser.users.name}
+                                            </>
+                                        ) : (
+                                                <>
+                                                    {store.currentUser.users.email}
+
+                                                </>
+                                            )
+                                    }
                                 </Link>
                                 <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                     <Link className="dropdown-item" href="#">Panel de Control</Link>
