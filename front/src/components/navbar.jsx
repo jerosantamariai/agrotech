@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { Context } from '../store/appContext';
 
 const Navbar = props => {
-    const { store } = useContext(Context)
+    const { store, actions } = useContext(Context)
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <Link className="navbar-brand" to="#">Agrotech</Link>
@@ -18,7 +18,7 @@ const Navbar = props => {
                 </ul>
                 <ul className="navbar-nav ml-auto">
                     {
-                        !!store.isAuth === true ? (
+                        store.currentUser !== null ? (
                             <li className="nav-item dropdown">
                                 <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {
@@ -38,7 +38,7 @@ const Navbar = props => {
                                     <Link className="dropdown-item" href="#">Panel de Control</Link>
                                     <Link className="dropdown-item" href="#">Configuración</Link>
                                     <hr />
-                                    <Link className="dropdown-item" href="#">Cerrar Sesión</Link>
+                                    <Link className="dropdown-item" href="/" onClick={actions.logout}>Cerrar Sesión</Link>
                                 </div>
                             </li>
 
