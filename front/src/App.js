@@ -7,6 +7,7 @@ import Navbar from './components/navbar';
 import Register from './views/register';
 import Login from './views/login';
 import MainDash from './views/mainDash';
+import UsersDash from './views/dashviews/usersDash';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Switch>
           
+            <Route exact path="/dashboard/usuarios" component={UsersDash} />
             <Route exact path="/dashboard" component={MainDash} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />

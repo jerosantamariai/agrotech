@@ -37,7 +37,7 @@ const MainDash = props => {
                                                     <>
                                                         <div className="list-group">
                                                             <p>Menú Admin</p>
-                                                            <Link to="/dashboard/dashadminuser" className="list-group-item list-group-item-action">User's Admin</Link>
+                                                            <Link to="/dashboard/usuarios" className="list-group-item list-group-item-action">Usuarios Registrados</Link>
                                                             <Link to="/dashboard/dashadminblog" className="list-group-item list-group-item-action">Blog's Admin</Link>
                                                         </div>
                                                         <hr className="hr1 my-3 col-md-10" />
